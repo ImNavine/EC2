@@ -1,5 +1,33 @@
 <resources>
     <string name="app_name">EC2</string>
+<<<<<<< HEAD
+    <string name="Boton_Registrar">REGISTRAR</string>
+    <string name="boton_Formulario">FORMULARIO</string>
+    <string name="Boton_Listado">LISTADO\n</string>
+    <string name="tvCuestionario">CUESTIONARIO\n</string>
+    <string name="TvHabilidades">1. MARQUE SUS HABILIDADES</string>
+    <string name="CheckbAutoconocimiento">Autoconocimiento</string>
+    <string name="CheckbEmpatia">Empatía</string>
+    <string name="CheckbComunicacionA">Comunicación Asertiva</string>
+    <string name="CheckbTomaDesiciones">Toma de Decisiones</string>
+    <string name="CheckbPensamientoC">Pensamiento Crítico</string>
+    <string name="CheckbNinguno">Ningúno</string>
+    <string name="TvSignificativoTrabajo">2.¿Cuan Significativo es tu Trabajo?</string>
+    <string name="RBMUCHO">Mucho</string>
+    <string name="RB1MASOMENOS">Más o Menos</string>
+    <string name="RBPOCO">Poco</string>
+    <string name="PREGUNTA3">3.¿Que tan bien te pagan en el trabajo que haces?</string>
+    <string name="RB2BIEN">Bien</string>
+    <string name="RB2REGULAR">Regular</string>
+    <string name="RB2MAL">Mal</string>
+    <string name="tvTRABAJAS_BAJO_PRESION">4.¿Trabajas bajo Presión?</string>
+    <string name="RB3SI">Si</string>
+    <string name="Rb3NO">No</string>
+    <string name="TvOportunidad_Crecimiento">5.¿Tienes Oportunidad de Crecimiento en tu \nTrabajo?</string>
+    <string name="RB4SI">Si</string>
+    <string name="RB4NO">No</string>
+    <string name="BTNENVIAR">Enviar</string>
+=======
     <string name="tvinformacion">INFORMACIÓN</string>
     <string name="valetnombre">Nombre</string>
     <string name="valetapellidos">Apellidos</string>
@@ -18,4 +46,5 @@
     <string name="valrbdivorciado">Divorciado</string>
     <string name="valrbviudo">Viudo</string>
     <string name="valbtnacceder">Acceder</string>
+>>>>>>> c1e97a2839c00337608ff606fee3935639f6a5aa
 </resources>

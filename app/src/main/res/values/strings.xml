@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">EC2</string>
+<<<<<<< HEAD
     <string name="Boton_Registrar">REGISTRAR</string>
     <string name="boton_Formulario">FORMULARIO</string>
     <string name="Boton_Listado">LISTADO\n</string>
@@ -26,4 +27,24 @@
     <string name="RB4SI">Si</string>
     <string name="RB4NO">No</string>
     <string name="BTNENVIAR">Enviar</string>
+=======
+    <string name="tvinformacion">INFORMACIÓN</string>
+    <string name="valetnombre">Nombre</string>
+    <string name="valetapellidos">Apellidos</string>
+    <string name="valetdni">DNI</string>
+    <string name="valetcelular">Celular</string>
+    <string name="valetemail">Email</string>
+    <string name="tvcualidades">Selecciones sus cualidades:</string>
+    <string name="valcbpuntual">Puntual</string>
+    <string name="valcbrespetuoso">Respetuoso</string>
+    <string name="valcbresponsable">Responsable</string>
+    <string name="valcbotro">Otro</string>
+    <string name="valetotracualidad">Ingrese otra cualidad</string>
+    <string name="valetestadocivil">Estado Civil:</string>
+    <string name="valrbsoltero">Soltero</string>
+    <string name="valrbcasado">Casado</string>
+    <string name="valrbdivorciado">Divorciado</string>
+    <string name="valrbviudo">Viudo</string>
+    <string name="valbtnacceder">Acceder</string>
+>>>>>>> c1e97a2839c00337608ff606fee3935639f6a5aa
 </resources>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">EC2</string>
+    <string name="tvinformacion">INFORMACIÓN</string>
+    <string name="valetnombre">Nombre</string>
+    <string name="valetapellidos">Apellidos</string>
+    <string name="valetdni">DNI</string>
+    <string name="valetcelular">Celular</string>
+    <string name="valetemail">Email</string>
+    <string name="tvcualidades">Selecciones sus cualidades:</string>
+    <string name="valcbpuntual">Puntual</string>
+    <string name="valcbrespetuoso">Respetuoso</string>
+    <string name="valcbresponsable">Responsable</string>
+    <string name="valcbotro">Otro</string>
+    <string name="valetotracualidad">Ingrese otra cualidad</string>
+    <string name="valetestadocivil">Estado Civil:</string>
+    <string name="valrbsoltero">Soltero</string>
+    <string name="valrbcasado">Casado</string>
+    <string name="valrbdivorciado">Divorciado</string>
+    <string name="valrbviudo">Viudo</string>
+    <string name="valbtnacceder">Acceder</string>
 </resources>

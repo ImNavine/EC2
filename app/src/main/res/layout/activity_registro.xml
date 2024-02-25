@@ -135,6 +135,7 @@
             android:ems="10"
             android:hint="@string/valetotracualidad"
             android:inputType="text"
+            android:visibility="visible"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -191,6 +192,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:text="@string/valbtnacceder"
+            app:icon="@drawable/baseline_send_24"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/rgestadocivil" />
@@ -203,6 +205,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:text="Listar"
+            app:icon="@drawable/baseline_adb_24"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/btnacceder" />

@@ -14,9 +14,9 @@ class ListarRegistroActivity : AppCompatActivity() {
         binding=ActivityListarRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val listaPersonas=intent.getSerializableExtra("listapersonas") as ArrayList<String>
+        val listaRegistro=intent.getSerializableExtra("listaregistro") as ArrayList<String>
 
-        val adapter = ArrayAdapter(applicationContext, R.layout.simple_list_item_1, listaPersonas )
+        val adapter = ArrayAdapter(applicationContext, R.layout.simple_list_item_1, listaRegistro )
 
         binding.lvpersonas.adapter=adapter
     }

@@ -14,16 +14,19 @@ import pe.edu.idat.ec2.databinding.ActivityRegistroBinding
 class RegistroActivity : AppCompatActivity(), OnClickListener{
 
     private lateinit var binding: ActivityRegistroBinding
-    private var listaCualidades = ArrayList<String>()
-    private var listaPersonas= ArrayList<String>()
-    private var listaEstadoCivil= ArrayList<String>()
+    private val listaCualidades = ArrayList<String>()
+    private val listaRegistro= ArrayList<String>()
+    private val listaEstadoCivil= ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         Log.i("MensajeInformacion", "RegistroActivity Iniciado")
+
         binding.btnacceder.setOnClickListener(this)
         binding.btnlistar.setOnClickListener(this)
+
         binding.cbotro.setOnClickListener(this)
         binding.cbrespetuoso.setOnClickListener(this)
         binding.cbresponsable.setOnClickListener(this)
@@ -39,8 +42,8 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
                 R.id.btnlistar -> startActivity(
                     Intent(
                         applicationContext,
-                        ListadoActivity::class.java).apply {
-                        putExtra("listapersonas", listaPersonas)
+                        ListarRegistroActivity::class.java).apply {
+                        putExtra("listaregistro", listaRegistro)
                     })
             }
         }
@@ -48,15 +51,11 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
 
     fun registrarPersona() {
         if (validarFormulario()){
-            val infoPersona = binding.etnombre.text.toString() + " " +
-                    binding.etapellidos.text.toString() + " " +
-                    binding.etdni.text.toString() + " " +
-                    binding.etcelular.text.toString() + " " +
-                    binding.etemail.text.toString() + " " +
-                    obtenerCualidades() + " " +
-                    binding.etcualidad.toString() + " " +
-                    obtenerEstadoCivil()
-            listaPersonas.add(infoPersona)
+            val infoPersona = binding.etnombre.text.toString() + " | " + binding.etapellidos.text.toString() + " | " +
+                    binding.etdni.text.toString() + " | " + binding.etcelular.text.toString() + " | " +
+                    binding.etemail.text.toString() + " | " + obtenerCualidades() + " | " +
+                    binding.etcualidad.text.toString() + " | " +  obtenerEstadoCivil()
+            listaRegistro.add(infoPersona)
 
             Toast.makeText(this, "Registro realizado correctamente", Toast.LENGTH_SHORT).show()
 
@@ -65,20 +64,31 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
 
     }
 
-    private fun obtenerCualidades():String{
+     fun obtenerCualidades():String{
         var cualidades= ""
         for (cuali in listaCualidades){
-            cualidades += "$cuali"
+            cualidades += "$cuali -"
         }
         return cualidades
     }
 
-    fun obtenerEstadoCivil():String{
+     fun obtenerEstadoCivil():String{
         var estadocivil=""
-        for(est in listaEstadoCivil){
-            estadocivil+= "$est "
+        when(binding.rgestadocivil.checkedRadioButtonId){
+            R.id.rbviudo->{
+                estadocivil=binding.rbviudo.text.toString()
+            }
+            R.id.rbdivorciado-> {
+                estadocivil = binding.rbdivorciado.text.toString()
+            }
+            R.id.rbcasado-> {
+                estadocivil = binding.rbcasado.text.toString()
+            }
+            R.id.rbsoltero-> {
+                estadocivil = binding.rbsoltero.text.toString()
+            }
         }
-        return estadocivil
+         return estadocivil
     }
 
     private fun setearControles(){
@@ -121,12 +131,20 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
             binding.etemail.isFocusableInTouchMode = true
             binding.etemail.requestFocus()
             respuesta = false
-        }else if (binding.etcualidad.text.toString().trim().isEmpty()) {
+        }
+        return respuesta
+    }
+
+
+
+    fun validarotracualidad():Boolean{
+        var respuesta=true
+        if (binding.etcualidad.text.toString().trim().isEmpty()) {
             binding.etcualidad.isFocusableInTouchMode = true
             binding.etcualidad.requestFocus()
             respuesta = false
         }
-        return respuesta
+        return  respuesta
     }
 
     fun validarCualidades():Boolean{
@@ -148,11 +166,13 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
     fun validarFormulario():Boolean{
         var respuesta=false
         if (!validarPersona()){
-            Toast.makeText(this, "Ingrese los datos", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Datos Insuficientes", Toast.LENGTH_SHORT).show()
         }else if (!validarCualidades()){
             Toast.makeText(this, "Seleccione al menos una cualidad", Toast.LENGTH_SHORT).show()
         }else if (!validarEstadiCivil()){
             Toast.makeText(this, "Seleccione su estado civil", Toast.LENGTH_SHORT).show()
+        }else if (!validarotracualidad()){
+            Toast.makeText(this, "Ingrese otra cualidad", Toast.LENGTH_SHORT).show()
         } else respuesta=true
         return respuesta
     }

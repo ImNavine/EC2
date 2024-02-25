@@ -27,7 +27,7 @@
     <string name="RB4SI">Si</string>
     <string name="RB4NO">No</string>
     <string name="BTNENVIAR">Enviar</string>
-=======
+    =======
     <string name="tvinformacion">INFORMACIÓN</string>
     <string name="valetnombre">Nombre</string>
     <string name="valetapellidos">Apellidos</string>
@@ -47,4 +47,5 @@
     <string name="valrbviudo">Viudo</string>
     <string name="valbtnacceder">Acceder</string>
     <string name="mensajeRegistroCorrecto">Registro Realizado Correctamente</string>
+    <string name="valetlistado">LISTADO</string>
 </resources>

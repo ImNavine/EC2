@@ -1,14 +1,15 @@
 package pe.edu.idat.ec2
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.CheckBox
-import pe.edu.idat.ec2.comunes.AppMensaje
-import pe.edu.idat.ec2.comunes.TipoMensaje
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import pe.edu.idat.ec2.databinding.ActivityRegistroBinding
+
 
 class RegistroActivity : AppCompatActivity(), OnClickListener{
 
@@ -22,6 +23,7 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
         setContentView(binding.root)
         Log.i("MensajeInformacion", "RegistroActivity Iniciado")
         binding.btnacceder.setOnClickListener(this)
+        binding.btnlistar.setOnClickListener(this)
         binding.cbotro.setOnClickListener(this)
         binding.cbrespetuoso.setOnClickListener(this)
         binding.cbresponsable.setOnClickListener(this)
@@ -34,6 +36,12 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
         }else{
             when(vista.id){
                 R.id.btnacceder->registrarPersona()
+                R.id.btnlistar -> startActivity(
+                    Intent(
+                        applicationContext,
+                        ListadoActivity::class.java).apply {
+                        putExtra("listapersonas", listaPersonas)
+                    })
             }
         }
     }
@@ -49,11 +57,8 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
                     binding.etcualidad.toString() + " " +
                     obtenerEstadoCivil()
             listaPersonas.add(infoPersona)
-            AppMensaje.enviarMensaje(
-                binding.root,
-                getString(R.string.mensajeRegistroCorrecto),
-                TipoMensaje.SUCCESSFULL
-            )
+
+            Toast.makeText(this, "Registro realizado correctamente", Toast.LENGTH_SHORT).show()
 
             setearControles()
         }
@@ -143,11 +148,11 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
     fun validarFormulario():Boolean{
         var respuesta=false
         if (!validarPersona()){
-            AppMensaje.enviarMensaje(binding.root, "Ingrese sus datos", TipoMensaje.ERROR)
+            Toast.makeText(this, "Ingrese los datos", Toast.LENGTH_SHORT).show()
         }else if (!validarCualidades()){
-            AppMensaje.enviarMensaje(binding.root, "Seleccione al menos una cualidad", TipoMensaje.ERROR)
+            Toast.makeText(this, "Seleccione al menos una cualidad", Toast.LENGTH_SHORT).show()
         }else if (!validarEstadiCivil()){
-            AppMensaje.enviarMensaje(binding.root, "Seleccione su estado civil", TipoMensaje.ERROR)
+            Toast.makeText(this, "Seleccione su estado civil", Toast.LENGTH_SHORT).show()
         } else respuesta=true
         return respuesta
     }

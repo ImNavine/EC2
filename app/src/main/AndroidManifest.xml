@@ -19,13 +19,13 @@
             android:name=".FormularioActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegistroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

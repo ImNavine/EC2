@@ -29,7 +29,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/valetcelular"
-            android:inputType="text"
+            android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/etdni" />
@@ -41,7 +41,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:hint="@string/valetdni"
-            android:inputType="text"
+            android:inputType="number"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/etapellidos" />
@@ -184,7 +184,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/btnenviar"
+            android:id="@+id/btnacceder"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

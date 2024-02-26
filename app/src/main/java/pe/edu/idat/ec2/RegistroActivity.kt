@@ -53,8 +53,7 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
         if (validarFormulario()){
             val infoPersona = binding.etnombre.text.toString() + " | " + binding.etapellidos.text.toString() + " | " +
                     binding.etdni.text.toString() + " | " + binding.etcelular.text.toString() + " | " +
-                    binding.etemail.text.toString() + " | " + obtenerCualidades() + " | " +
-                    binding.etcualidad.text.toString() + " | " +  obtenerEstadoCivil()
+                    binding.etemail.text.toString() + " | " + obtenerCualidades() + " | " +binding.etcualidad.text.toString()+ " | " +  obtenerEstadoCivil()
             listaRegistro.add(infoPersona)
 
             Toast.makeText(this, "Registro realizado correctamente", Toast.LENGTH_SHORT).show()
@@ -139,9 +138,13 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
 
     fun validarotracualidad():Boolean{
         var respuesta=true
-        if (binding.etcualidad.text.toString().trim().isEmpty()) {
+        if (binding.etcualidad.text.toString().trim().isEmpty() && binding.cbotro.isChecked) {
             binding.etcualidad.isFocusableInTouchMode = true
             binding.etcualidad.requestFocus()
+            respuesta = false
+        }
+        else if (!binding.cbotro.isChecked){
+            binding.etcualidad.isFocusableInTouchMode = false
             respuesta = false
         }
         return  respuesta
@@ -149,8 +152,7 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
 
     fun validarCualidades():Boolean{
         var respuesta= false
-        if (binding.cbpuntual.isChecked || binding.cbrespetuoso.isChecked ||
-            binding.cbresponsable.isChecked || binding.cbotro.isChecked){
+        if (binding.cbpuntual.isChecked || binding.cbrespetuoso.isChecked || binding.cbresponsable.isChecked || binding.cbotro.isChecked){
             respuesta=true
         }
         return respuesta
@@ -181,14 +183,14 @@ class RegistroActivity : AppCompatActivity(), OnClickListener{
         if (vista.isChecked){
             when (vista.id){
                 R.id.cbpuntual->listaCualidades.add(vista.text.toString())
-                R.id.cbrespetuoso->listaCualidades.add(vista.text.toString())
+                R.id.cbresponsable->listaCualidades.add(vista.text.toString())
                 R.id.cbrespetuoso->listaCualidades.add(vista.text.toString())
                 R.id.cbotro->listaCualidades.add(vista.text.toString())
             }
         }else{
             when (vista.id){
                 R.id.cbpuntual->listaCualidades.remove(vista.text.toString())
-                R.id.cbrespetuoso->listaCualidades.remove(vista.text.toString())
+                R.id.cbresponsable->listaCualidades.remove(vista.text.toString())
                 R.id.cbrespetuoso->listaCualidades.remove(vista.text.toString())
                 R.id.cbotro->listaCualidades.remove(vista.text.toString())
             }

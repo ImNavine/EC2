@@ -48,5 +48,10 @@
     <string name="valbtnacceder">Acceder</string>
     <string name="mensajeRegistroCorrecto">Registro Realizado Correctamente</string>
     <string name="valetlistado">LISTADO</string>
+<<<<<<< HEAD
     <string name="valetlistarF">Listar</string>
+=======
+    <string name="INT">INTERNACIONALES</string>
+    <string name="INT3">INTERNACIONALES</string>
+>>>>>>> bb0384076637f7d395ccb2c86d5a965a8a97f5b8
 </resources>

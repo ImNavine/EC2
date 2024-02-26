@@ -48,4 +48,5 @@
     <string name="valbtnacceder">Acceder</string>
     <string name="mensajeRegistroCorrecto">Registro Realizado Correctamente</string>
     <string name="valetlistado">LISTADO</string>
+    <string name="valetlistarF">Listar</string>
 </resources>

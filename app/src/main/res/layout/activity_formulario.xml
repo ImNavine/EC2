@@ -47,60 +47,54 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCuestionario" />
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/design_default_color_secondary"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-        <CheckBox
-            android:id="@+id/cbAutoconocimiento"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbAutoconocimiento" />
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
 
-        <CheckBox
-            android:id="@+id/cbEmpatia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbEmpatia" />
+            <CheckBox
+                android:id="@+id/cbAutoconocimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbAutoconocimiento" />
 
-        <CheckBox
-            android:id="@+id/cbComunicacionA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbComunicacionA" />
+            <CheckBox
+                android:id="@+id/cbEmpatia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbEmpatia" />
 
-        <CheckBox
-            android:id="@+id/cbTomaDecisiones"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbTomaDesiciones" />
+            <CheckBox
+                android:id="@+id/cbComunicacionA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbComunicacionA" />
 
-        <CheckBox
-            android:id="@+id/cbPensamientoC"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbPensamientoC" />
+            <CheckBox
+                android:id="@+id/cbTomaDecisiones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbTomaDesiciones" />
 
-        <CheckBox
-            android:id="@+id/cbNinguno"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/CheckbNinguno" />
+            <CheckBox
+                android:id="@+id/cbPensamientoC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbPensamientoC" />
 
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/cbNinguno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CheckbNinguno" />
+
+        </LinearLayout>
 
 
     <TextView
@@ -115,41 +109,40 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="NotSibling" />
 
-    <RadioGroup
-        android:id="@+id/rgTrabajo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/design_default_color_secondary"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
-
-        <RadioButton
-            android:id="@+id/rbMucho"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/rgTrabajo"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/design_default_color_secondary"
-            android:text="@string/RBMUCHO" />
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView7">
 
-        <RadioButton
-            android:id="@+id/rbMaso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB1MASOMENOS"
-            tools:ignore="TouchTargetSizeCheck" />
+            <RadioButton
+                android:id="@+id/rbMucho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RBMUCHO" />
 
-        <RadioButton
-            android:id="@+id/rbPoco"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RBPOCO" />
+            <RadioButton
+                android:id="@+id/rbMaso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB1MASOMENOS"
+                tools:ignore="TouchTargetSizeCheck" />
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbPoco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RBPOCO" />
+
+        </RadioGroup>
 
     <TextView
         android:id="@+id/textView8"
@@ -161,38 +154,38 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/rgTrabajo" />
 
-    <RadioGroup
-        android:id="@+id/rgPago"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/design_default_color_secondary"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-        <RadioButton
-            android:id="@+id/rbBien"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/rgPago"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB2BIEN" />
+            android:layout_marginTop="10dp"
+            android:background="@color/design_default_color_primary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
 
-        <RadioButton
-            android:id="@+id/rbRegular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB2REGULAR" />
+            <RadioButton
+                android:id="@+id/rbBien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB2BIEN" />
 
-        <RadioButton
-            android:id="@+id/rbMal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB2MAL" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB2REGULAR" />
+
+            <RadioButton
+                android:id="@+id/rbMal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB2MAL" />
+        </RadioGroup>
 
     <TextView
         android:id="@+id/textView9"
@@ -205,30 +198,30 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/rgPago" />
 
-    <RadioGroup
-        android:id="@+id/rgPresion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/design_default_color_secondary"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        <RadioButton
-            android:id="@+id/rbSiPre"
-            android:layout_width="58dp"
+        <RadioGroup
+            android:id="@+id/rgPresion"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RB3SI" />
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_primary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-        <RadioButton
-            android:id="@+id/rbNoPre"
-            android:layout_width="66dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/Rb3NO" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbSiPre"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:text="@string/RB3SI" />
+
+            <RadioButton
+                android:id="@+id/rbNoPre"
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/Rb3NO" />
+        </RadioGroup>
 
     <TextView
         android:id="@+id/textView10"
@@ -241,54 +234,55 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/rgPresion" />
 
-    <RadioGroup
-        android:id="@+id/rgOpor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="@color/design_default_color_secondary"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
-
-        <RadioButton
-            android:id="@+id/rbSiOpor"
-            android:layout_width="61dp"
+        <RadioGroup
+            android:id="@+id/rgOpor"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB4SI" />
+            android:layout_marginTop="5dp"
+            android:background="@color/design_default_color_primary"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-        <RadioButton
-            android:id="@+id/rbNoOpor"
-            android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/rbSiOpor"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB4SI" />
+
+            <RadioButton
+                android:id="@+id/rbNoOpor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/RB4NO" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/RB4NO" />
-    </RadioGroup>
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:text="@string/BTNENVIAR"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/rgOpor" />
 
-    <Button
-        android:id="@+id/btnEnviar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/design_default_color_secondary"
-        android:text="@string/BTNENVIAR"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/rgOpor" />
-
-    <Button
-        android:id="@+id/btnListarF"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Listar"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+        <Button
+            android:id="@+id/btnListarF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/material_dynamic_primary20"
+            android:text="Listar"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
